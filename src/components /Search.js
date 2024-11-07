@@ -6,7 +6,7 @@ function Search({ searchTerm, setSearchTerm }) {
   };
   return (
     <div className="searchbar">
-      <label htmlFor="search">Search Plants:</label>
+      <label htmlFor="search">Search Cupcake:</label>
       <input
         type="text"
         id="search"

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function NewPlantForm({ addPlant }) {
+function CupCakeNewForm({ addCupCake }) {
   const [formData, setFormData] = useState({
     name: "",
     image: "",
@@ -14,18 +14,18 @@ function NewPlantForm({ addPlant }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    addPlant(formData);
+    addCupCake(formData);
     setFormData({ name: "", image: "", price: "" });
   };
 
   return (
-    <div className="new-plant-form">
-      <h2>New Plant</h2>
+    <div className="new-cupcake-form">
+      <h2>New CupCake</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
-          placeholder="Plant name"
+          placeholder="CupCake name"
           value={formData.name}
           onChange={handleChange}
         />
@@ -44,10 +44,10 @@ function NewPlantForm({ addPlant }) {
           value={formData.price}
           onChange={handleChange}
         />
-        <button type="submit">Add Plant</button>
+        <button type="submit">Add CupCake</button>
       </form>
     </div>
   );
 }
 
-export default NewPlantForm;
+export default CupCakeNewForm;

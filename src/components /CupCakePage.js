@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CupCakeNewForm from "./CupecakeNewForm";
-import CupCakeList from "./CupcakeList";
+import CupCakeNewForm from "./CupCakeNewForm";
+import CupCakeList from "./CupCake";
 import Search from "./Search";
 
 function CupCakePage() {
