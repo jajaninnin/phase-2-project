@@ -8,7 +8,7 @@ function CupCakeCard({ cupCake, cupCakeImgs, prices, deleteCupCake }) {
   };
 
   const handleDelete = () => {
-    deletePlant(plant.id); 
+    deleteCupCake(cupCake.id); 
   }; 
 
   return (

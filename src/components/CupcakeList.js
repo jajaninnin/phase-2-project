@@ -5,7 +5,7 @@ function CupCakeList({ cupCake, deleteCupCake }) {
   return (
     <ul className="cards">
       {cupCake.map((cupCake) => (
-        <PlantCard
+        <CupCakeCard
           key={cupCake.id}
           cupCake={cupCake}
           cupCakeImgs={cupCake.image}

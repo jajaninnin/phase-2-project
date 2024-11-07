@@ -1,9 +1,8 @@
 import React from "react";
-import NavBar from "../src/components /NavBar";
-import CupCakePage from "../src/components/CupCakePage"
+import NavBar from "./components/NavBar";
+import CupCakePage from "./components/CupCakePage";
 
-
-function App() {
+const App = () => {
   return (
     <div className="app">
       <NavBar />
