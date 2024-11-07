@@ -1,0 +1,53 @@
+{
+    "Cupcakes": [
+      {
+        "id": 1,
+        "name": "Red Velvet",
+        "image": "https://www.rainbownourishments.com/wp-content/uploads/2023/02/vegan-red-velvet-cupcakes-1-500x500.jpg",
+        "price": 2.25
+      },
+      {
+        "id": 2,
+        "name": "Chocolate Cupcake",
+        "image": "https://sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg",
+        "price": 3.25
+      },
+      {
+        "id": 3,
+        "name": "Vanilla Cupcake",
+        "image": "https://beyondfrosting.com/wp-content/uploads/2022/01/Easy-Moist-Vanilla-Cupcakes-021-2.jpg",
+        "price": 4.25
+      },
+      {
+        "id": 4,
+        "name": "Strawberry Cupcake",
+        "image": "https://media.istockphoto.com/id/167120918/photo/pink-and-white-frosted-cupcake-isolated-on-white.jpg?s=612x612&w=0&k=20&c=o1xFPaMLhmq7y-LczWkePTOP1yotfx6OOT9VHcDNha0=",
+        "price": 3.25
+      },
+      {
+        "id": 5,
+        "name": "Tiramisu Cupcake",
+        "image": "https://richanddelish.com/wp-content/uploads/2024/06/Tiramisu-Cupcakes.jpg",
+        "price": 2.25
+      },
+      {
+        "id": 6,
+        "name": "Orea Cupckake",
+        "image": "https://sugarspunrun.com/wp-content/uploads/2020/09/Oreo-Cupcakes-1-of-1-9-500x500.jpg",
+        "price": 4.00
+      },
+      {
+        "id": 7,
+        "name": "Peanut Cupcake",
+        "image": "https://sugarspunrun.com/wp-content/uploads/2022/12/Peanut-Butter-Cupcakes-1-of-1.jpg",
+         "price": 1.00
+      },
+      {
+        "id": 8,
+        "name": "Brownie Cupcake",
+        "image": "https://www.katiegetscreative.com/wp-content/uploads/2023/03/chewybrowniecupcakes-crop.jpg",
+        "price": "23.5"
+      }
+    ]
+  }
+  
