@@ -23,7 +23,7 @@ const routes = [
   {
     path: "/components/CupCakeNewForm",
     element: <CupCakeNewForm />,
-    
+
   }
 ];
 
