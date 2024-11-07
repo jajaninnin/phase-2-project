@@ -1,56 +1,56 @@
 import React, { useState, useEffect } from "react";
-import NewPlantForm from "./NewPlantForm";
-import PlantList from "./PlantList";
+import CupCakeNewForm from "./CupecakeNewForm";
+import CupCakeList from "./CupCake";
 import Search from "./Search";
 
-function PlantPage() {
-  const [plants, setPlants] = useState([]);
+function CupCakePage() {
+  const [cupCake, cupCakePlants] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:6001/plants")
       .then((response) => response.json())
-      .then((data) => setPlants(data))
-      .catch((error) => console.error("Error fetching plant data:", error));
+      .then((data) => setcupCake(data))
+      .catch((error) => console.error("Error fetching cupCake data:", error));
   }, []);
 
-  const addPlant = (newPlant) => {
+  const addcupCake = (newcupCake) => {
     fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
         "Content-Type": "Application/JSON",
       },
-      body: JSON.stringify(newPlant),
+      body: JSON.stringify(newcupCake),
     })
       .then((response) => response.json())
-      .then((addedPlant) => {
-        setPlants([...plants, addedPlant]);
+      .then((addedcupCake) => {
+        setcupCake([...cupCake, addedcupCake]);
       })
-      .catch((error) => console.error("Error adding new plant:", error));
+      .catch((error) => console.error("Error adding new cupCake:", error));
   };
 
-  const deletePlant = (id) => {
+  const deleteCupCake = (id) => {
     fetch(`http://localhost:6001/plants/${id}`, {
       method: "DELETE",
     })
       .then(() => {
-        const updatedPlants = plants.filter((plant) => plant.id !== id);
-        setPlants(updatedPlants); 
+        const updatedCupCake = pcupCake.filter((cupCake) => cupCake.id !== id);
+        setCupCake(updatedCupCake); 
       })
-      .catch((error) => console.error("Error deleting plant:", error));
+      .catch((error) => console.error("Error deleting cupCake:", error));
   };
 
-  const filteredPlants = plants.filter((plant) =>
-    plant.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredCupCake = cupCake.filter((cupCake) =>
+    cupCake.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <main>
-      <NewPlantForm addPlant={addPlant} />
+      <CupCakeNewForm addCupCake={addCupCake} />
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <PlantList plants={filteredPlants} deletePlant={deletePlant} /> 
+      <CupCakeList cupCake={filteredPlants} deleteCupCake={deleteCupCake} /> 
     </main>
   );
 }
 
-export default PlantPage;
+export default CupCakePage;
