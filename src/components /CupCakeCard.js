@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function PlantCard({ plant, plantImgs, prices, deletePlant }) {
+function CupCakeCard({ cupCake, cupCakeImgs, prices, deleteCupCake }) {
   const [inStock, setInStock] = useState(true);
 
   const toggleStock = () => {
@@ -12,9 +12,9 @@ function PlantCard({ plant, plantImgs, prices, deletePlant }) {
   }; 
 
   return (
-    <li className="card" data-testid="plant-item">
-      <img src={plantImgs} alt={plant.name} />
-      <h4>{plant.name}</h4>
+    <li className="card" data-testid="cupCake-item">
+      <img src={cupCakeImgs} alt={cupCake.name} />
+      <h4>{cupCake.name}</h4>
       <p>Price: {prices}</p>
       <button className={inStock ? "primary" : ""} onClick={toggleStock}>
         {inStock ? "In Stock" : "Out of Stock"}
@@ -24,4 +24,4 @@ function PlantCard({ plant, plantImgs, prices, deletePlant }) {
   );
 }
 
-export default PlantCard;
+export default CupCakeCard;

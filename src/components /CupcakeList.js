@@ -1,20 +1,20 @@
 import React from "react";
-import PlantCard from "./PlantCard";
+import CupCakeCard from "./CupCakeCard";
 
-function PlantList({ plants, deletePlant }) {
+function CupCakeList({ cupCake, deleteCupCake }) {
   return (
     <ul className="cards">
-      {plants.map((plant) => (
+      {cupCake.map((cupCake) => (
         <PlantCard
-          key={plant.id}
-          plant={plant}
-          plantImgs={plant.image}
-          prices={plant.price}
-          deletePlant={deletePlant} 
+          key={cupCake.id}
+          cupCake={cupCake}
+          cupCakeImgs={cupCake.image}
+          prices={cupCake.price}
+          deleteCupCake={deleteCupCake} 
         />
       ))}
     </ul>
   );
 }
 
-export default PlantList;
+export default CupCakeList;
