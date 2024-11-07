@@ -1,13 +1,13 @@
-import React, {useState,useEffect} from "react";
-import Header from "./Header";
-import PlantPage from "./PlantPage";
+import React from "react";
+import NavBar from "../src/components /NavBar";
+import CupCakePage from "../src/components/CupCakePage"
 
 
 function App() {
   return (
     <div className="app">
-      <Header />
-      <PlantPage />
+      <NavBar />
+      <CupCakePage />
     </div>
   );
 }

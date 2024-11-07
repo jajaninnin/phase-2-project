@@ -4,13 +4,13 @@ import CupCakeList from "./CupCake";
 import Search from "./Search";
 
 function CupCakePage() {
-  const [cupCake, cupCakePlants] = useState([]);
+  const [cupCake, setCupcake] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:6001/plants")
+    fetch("http://localhost:3000/Cupcakes")
       .then((response) => response.json())
-      .then((data) => setcupCake(data))
+      .then((data) => setCupcake(data))
       .catch((error) => console.error("Error fetching cupCake data:", error));
   }, []);
 
@@ -23,22 +23,22 @@ function CupCakePage() {
       body: JSON.stringify(newcupCake),
     })
       .then((response) => response.json())
-      .then((addedcupCake) => {
-        setcupCake([...cupCake, addedcupCake]);
+      .then(() => {
+        setcupCake([...cupCake, addcupCake]);
       })
       .catch((error) => console.error("Error adding new cupCake:", error));
   };
 
-  const deleteCupCake = (id) => {
-    fetch(`http://localhost:6001/plants/${id}`, {
-      method: "DELETE",
-    })
-      .then(() => {
-        const updatedCupCake = pcupCake.filter((cupCake) => cupCake.id !== id);
-        setCupCake(updatedCupCake); 
-      })
-      .catch((error) => console.error("Error deleting cupCake:", error));
-  };
+  // const deleteCupCake = (id) => {
+  //   fetch(`http://localhost:6001/plants/${id}`, {
+  //     method: "DELETE",
+  //   })
+  //     .then(() => {
+  //       const updatedCupCake = pcupCake.filter((cupCake) => cupCake.id !== id);
+  //       setCupCake(updatedCupCake); 
+  //     })
+  //     .catch((error) => console.error("Error deleting cupCake:", error));
+  // };
 
   const filteredCupCake = cupCake.filter((cupCake) =>
     cupCake.name.toLowerCase().includes(searchTerm.toLowerCase())
