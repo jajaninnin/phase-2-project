@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
-import CupCakePage from "./components/CupCakePage";
-import Home from "./components/Home";
+import { Outlet } from "react-router-dom";
+
 
 const App = () => {
+  const [cupcakes, setCupcakes] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/Cupcakes")
+      .then((response) => response.json())
+      .then((data) => setCupcakes(data))
+      .catch((error) => console.error("Error fetching cupcake data:", error));
+  }, []);
+
   return (
     <div className="app">
-      <Home />
       <NavBar />
-      <CupCakePage />
+      <Outlet context={{cupcakes: cupcakes, setCupcakes: setCupcakes}} /> {/* Allows CupcakePage and CupcakeNewForm to access these */}
     </div>
   );
 }
