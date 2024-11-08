@@ -4,7 +4,6 @@ import CupcakePage from "./components/CupcakePage";
 import CupcakeCard from "./components/CupcakeCard";
 import CupcakeNewForm from "./components/CupcakeNewForm";
 import ErrorPage from "./ErrorPage";
-import CupcakeList from "./components/CupcakeList";
 
 const routes = [{
   path: "/",
@@ -19,18 +18,10 @@ const routes = [{
     {
       path: "/cupcakelist",
       element: <CupcakePage />,
-      children: [
-        {
-          path: "/cupcakelist",
-          element: <CupcakeList />,
-          children: [
-            {
-              path: "/cupcakelist/:id",
-              element: <CupcakeCard />, 
-            }
-          ]
-        }
-      ]
+    },  
+    {
+      path: "/cupcakelist/:id",
+      element: <CupcakeCard isIdividualPage={true} />, 
     },
     {
       path: "/cupcakenewform",
