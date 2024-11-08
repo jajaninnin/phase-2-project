@@ -1,20 +1,20 @@
 import React from "react";
-import CupCakeCard from "./CupCakeCard";
+import CupcakeCard from "./CupcakeCard";
 
-function CupCakeList({ cupCake, deleteCupCake }) {
+function CupcakeList({ cupcake, deleteCupcake }) {
   return (
     <ul className="cards">
-      {cupCake.map((cupCake) => (
-        <CupCakeCard
-          key={cupCake.id}
-          cupCake={cupCake}
-          cupCakeImgs={cupCake.image}
-          prices={cupCake.price}
-          deleteCupCake={deleteCupCake} 
+      {cupcake.map((cupcake) => (
+        <CupcakeCard
+          key={cupcake.id}
+          cupcake={cupcake}
+          cupcakeImgs={cupcake.image}
+          prices={cupcake.price}
+          deleteCupcake={deleteCupcake} 
         />
       ))}
     </ul>
   );
 }
 
-export default CupCakeList;
+export default CupcakeList;

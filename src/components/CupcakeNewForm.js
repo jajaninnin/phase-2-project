@@ -1,5 +1,23 @@
 import React, { useState } from "react";
-function CupCakeNewForm({ addCupCake }) {
+import { useOutletContext, useNavigate } from "react-router-dom";
+function CupcakeNewForm() {
+  const {cupcakes, setCupcakes} = useOutletContext();
+  const navigate = useNavigate();
+  const addCupcake = (newCupcake) => {
+    fetch("http://localhost:3000/Cupcakes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/JSON",
+      },
+      body: JSON.stringify(newCupcake),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        setCupcakes([...cupcakes, newCupcake]);
+        navigate('/cupcakelist');
+      })
+      .catch((error) => console.error("Error adding new cupcake:", error));
+  };
   const [formData, setFormData] = useState({
     name: "",
     image: "",
@@ -14,18 +32,18 @@ function CupCakeNewForm({ addCupCake }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    addCupCake(formData);
+    addCupcake(formData);
     setFormData({ name: "", image: "", price: "" });
   };
 
   return (
     <div className="new-cupcake-form">
-      <h2>New CupCake</h2>
+      <h2>New Cupcake</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
-          placeholder="CupCake name"
+          placeholder="cupcake name"
           value={formData.name}
           onChange={handleChange}
         />
@@ -44,10 +62,10 @@ function CupCakeNewForm({ addCupCake }) {
           value={formData.price}
           onChange={handleChange}
         />
-        <button type="submit">Add CupCake</button>
+        <button type="submit">Add cupcake</button>
       </form>
     </div>
   );
 }
 
-export default CupCakeNewForm;
+export default CupcakeNewForm;
