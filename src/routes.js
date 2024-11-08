@@ -21,7 +21,7 @@ const routes = [{
     },  
     {
       path: "/cupcakelist/:id",
-      element: <CupcakeCard isIdividualPage={true} />, 
+      element: <CupcakeCard isIndividualPage={true} />, 
     },
     {
       path: "/cupcakenewform",

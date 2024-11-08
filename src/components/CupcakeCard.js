@@ -6,11 +6,8 @@ function CupcakeCard({ cupcake, cupcakeImgs, prices, deleteCupcake, isIndividual
   const {cupcakes} = useOutletContext();
   const {id} = useParams();
   const cupcakeToFind = cupcakes.find((cupcake) => {
-    console,log(id)
     return cupcake.id === id})
   const cupcakeToRender = isIndividualPage ? cupcakeToFind : cupcake;
-  console.log(cupcakeToFind, "cupcakeToFind")
-console.log(cupcakeToRender, "cupcakeToRender")
 
   const toggleStock = () => {
     setInStock(!inStock);
@@ -20,9 +17,9 @@ console.log(cupcakeToRender, "cupcakeToRender")
     deleteCupcake(cupcakeToRender.id); 
   }; 
   
-  // if (cupcakes.length < 1){
-  //   return "Loading"
-  // }
+  if (cupcakes.length < 1){
+    return "Loading"
+  }
 
   return (
     <li className="card" data-testid="cupcake-item">
