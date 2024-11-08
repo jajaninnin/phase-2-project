@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function CupcakeCard({ cupcake, cupcakeImgs, prices, deleteCupcake }) {
   const [inStock, setInStock] = useState(true);
@@ -10,6 +11,9 @@ function CupcakeCard({ cupcake, cupcakeImgs, prices, deleteCupcake }) {
   const handleDelete = () => {
     deleteCupcake(cupcake.id); 
   }; 
+  function handleDetails() {
+    console.log("details")
+  }
 
   return (
     <li className="card" data-testid="cupcake-item">
@@ -20,6 +24,8 @@ function CupcakeCard({ cupcake, cupcakeImgs, prices, deleteCupcake }) {
         {inStock ? "In Stock" : "Out of Stock"}
       </button>
       <button className="submit-button" onClick={handleDelete}>Delete</button>
+      {/* <button className="details-button" onClick={handleDetails}>Details</button> */}
+      <Link to={`/cupcakelist/${cupcake.id}`}>Details</Link>
     </li>
   );
 }
