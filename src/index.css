@@ -151,4 +151,64 @@ input:focus {
     width: calc(20% - 2rem);
   }
 }
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.home h1 {
+  font-size: 2em;
+  color: #FF69B4; 
+}
+
+.home p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shop-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.shop-images img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #FF69B4;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.button-link:hover {
+  background-color: #FF1493;
+}
+.contact-info {
+  font-size: 0.8rem; 
+  text-align: center; 
+  margin-top: 20px; 
+  line-height: 0.0000000000001
+  
+
+  ; 
+}
+
+
+
+
 
