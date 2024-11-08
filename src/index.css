@@ -1,5 +1,5 @@
 :root {
-  --pink: pink;
+  --pink: rgb(251, 202, 210);
 }
 
 * {
@@ -25,7 +25,12 @@ button {
 
 button.primary {
   background-color: var(--pink);
-  color: white;
+  color: rgb(16, 11, 11);
+}
+
+.submit-button {
+  background-color: rgb(228, 102, 123);
+  color: black;
 }
 
 .app {
@@ -36,6 +41,10 @@ button.primary {
 header {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+.headers {
+  margin-left: 20%;
 }
 
 .logo-section {
@@ -58,23 +67,23 @@ main {
   padding: 0 1rem;
 }
 
-.new-plant-form {
+.new-cupcake-form {
   padding: 2rem 1rem;
   margin: 2rem 0;
-  background-color: rgba(181, 250, 181, 0.5);
+  background-color: rgb(244, 212, 216);
 }
 
-.new-plant-form form {
+.new-cupcake-form form {
   display: flex;
   justify-content: center;
 }
 
-.new-plant-form input {
+.new-cupcake-form input {
   margin-right: 2rem;
   flex: 1;
 }
 
-.new-plant-form button {
+.new-cupcake-form button {
   width: 150px;
 }
 

@@ -43,7 +43,7 @@ function CupcakeNewForm() {
         <input
           type="text"
           name="name"
-          placeholder="cupcake name"
+          placeholder="Cupcake Name"
           value={formData.name}
           onChange={handleChange}
         />
@@ -62,7 +62,7 @@ function CupcakeNewForm() {
           value={formData.price}
           onChange={handleChange}
         />
-        <button type="submit">Add cupcake</button>
+        <button className="submit-button" type="submit">Add cupcake</button>
       </form>
     </div>
   );
