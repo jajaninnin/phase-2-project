@@ -16,10 +16,10 @@ function CupcakeCard({ cupcake, cupcakeImgs, prices, deleteCupcake }) {
       <img src={cupcakeImgs} alt={cupcake.name} />
       <h4>{cupcake.name}</h4>
       <p>Price: {prices}</p>
-      <button className={inStock ? "primary" : ""} onClick={toggleStock}>
+      <button className={inStock ? "primary" : "submit-button"} onClick={toggleStock}>
         {inStock ? "In Stock" : "Out of Stock"}
       </button>
-      <button onClick={handleDelete}>Delete</button>
+      <button className="submit-button" onClick={handleDelete}>Delete</button>
     </li>
   );
 }
