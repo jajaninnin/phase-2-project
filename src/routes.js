@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 import App from "./App";
 import CupcakePage from "./components/CupcakePage";
-import CupcakeCard from "./components/CupcakeCard";
+import CupcakeDetails from "./components/CupcakeDetails";
 import CupcakeNewForm from "./components/CupcakeNewForm";
 import ErrorPage from "./ErrorPage";
 
@@ -21,7 +21,7 @@ const routes = [{
     },  
     {
       path: "/cupcakelist/:id",
-      element: <CupcakeCard isIndividualPage={true} />, 
+      element: <CupcakeDetails />, 
     },
     {
       path: "/cupcakenewform",
