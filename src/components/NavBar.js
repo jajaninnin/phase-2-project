@@ -14,6 +14,7 @@ function NavBar() {
         <Link className="header-link" to='/'>Home</Link>
         <Link className="header-link" to='/cupcakelist'>Cupcake List</Link>
         <Link className="header-link" to='/cupcakenewform'>Cupcake Form</Link>
+        <Link className="header-link" to='/mycart'>My Cart</Link>
       </span>
     </header>
   );
