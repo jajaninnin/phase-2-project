@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import CupcakeCard from "./CupcakeCard";
+import Search from "./Search";
 
-function CupcakeList({ cupcake, deleteCupcake }) {
+function CupcakeList() {
+  const {cupcakes} = useOutletContext(); // coming from App
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredCupcake = cupcakes.filter((cupcake) =>
+    cupcake.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+ 
   return (
-    <ul className="cards">
-      {cupcake.map((cupcake) => (
+    <main>
+      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <ul className="cards">
+      {filteredCupcake.map((cupcake) => (
         <CupcakeCard
           key={cupcake.id}
-          cupcake={cupcake}
-          cupcakeImgs={cupcake.image}
-          prices={cupcake.price}
-          deleteCupcake={deleteCupcake} 
+          id={cupcake.id}
+          name={cupcake.name}
+          img={cupcake.image}
+          price={cupcake.price}
         />
       ))}
     </ul>
+    </main>
   );
 }
 

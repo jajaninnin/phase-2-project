@@ -1,31 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useOutletContext } from "react-router-dom";
 
-function CupcakeCard({ cupcake, cupcakeImgs, prices, deleteCupcake }) {
-  const [inStock, setInStock] = useState(true);
+function CupcakeCard({ id, name, img, price }) {
+  const {checkIfInCart, addOrRemoveFromCart} = useOutletContext(); // coming from App
 
-  const toggleStock = () => {
-    setInStock(!inStock);
-  };
-
-  const handleDelete = () => {
-    deleteCupcake(cupcake.id); 
-  }; 
-  function handleDetails() {
-    console.log("details")
-  }
+  // If the cupcake is in the cart, you need to remove it when clicking the button,
+  // otherwise, you need to add it. This is used to determine if the add or remove happens.
+  const isInCart = checkIfInCart(id);
 
   return (
     <li className="card" data-testid="cupcake-item">
-      <img src={cupcakeImgs} alt={cupcake.name} />
-      <h4>{cupcake.name}</h4>
-      <p>Price: {prices}</p>
-      <button className={inStock ? "primary" : "submit-button"} onClick={toggleStock}>
-        {inStock ? "In Stock" : "Out of Stock"}
+      <img src={img} alt={name} />
+      <h4>{name}</h4>
+      <p>Price: {price}</p>
+      <button className="submit-button" onClick={() => addOrRemoveFromCart(id)}>
+        {isInCart ? 'Remove From Cart' : 'Add To Cart'}
       </button>
-      <button className="submit-button" onClick={handleDelete}>Delete</button>
-      {/* <button className="details-button" onClick={handleDetails}>Details</button> */}
-      <Link to={`/cupcakelist/${cupcake.id}`}>Details</Link>
+      <Link className="submit-button" to={`/cupcakelist/${id}`}>Details</Link>
     </li>
   );
 }

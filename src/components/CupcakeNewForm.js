@@ -4,7 +4,7 @@ function CupcakeNewForm() {
   const {cupcakes, setCupcakes} = useOutletContext();
   const navigate = useNavigate();
   const addCupcake = (newCupcake) => {
-    fetch("http://localhost:3000/Cupcakes", {
+    fetch("http://localhost:3000/cupcakes", {
       method: "POST",
       headers: {
         "Content-Type": "Application/JSON",

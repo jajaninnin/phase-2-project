@@ -1,10 +1,10 @@
 import Home from "./components/Home";
 import App from "./App";
-import CupcakePage from "./components/CupcakePage";
-import CupcakeCard from "./components/CupcakeCard";
+import CupcakeList from "./components/CupcakeList";
+import CupcakeDetails from "./components/CupcakeDetails";
 import CupcakeNewForm from "./components/CupcakeNewForm";
 import ErrorPage from "./ErrorPage";
-import CupcakeList from "./components/CupcakeList";
+import Cart from './components/Cart';
 
 const routes = [{
   path: "/",
@@ -18,23 +18,21 @@ const routes = [{
     }, 
     {
       path: "/cupcakelist",
-      element: <CupcakePage />,
-      children: [
-        {
-          path: "/cupcakelist",
-          element: <CupcakeList />,
-          children: [
-            {
-              path: "/cupcakelist/:id",
-              element: <CupcakeCard />, 
-            }
-          ]
-        }
-      ]
+      element: <CupcakeList />,
+    },  
+    {
+      //id needs to match when you use useParams on CupcakeDetails page, 
+      //so you can reference the specific cupcake id to be rendered on CupcakeDetails
+      path: "/cupcakelist/:id",
+      element: <CupcakeDetails />, 
     },
     {
       path: "/cupcakenewform",
       element: <CupcakeNewForm />,
+    },
+    {
+      path: "/mycart",
+      element: <Cart />,
     }
   ]
 }];
