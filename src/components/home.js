@@ -17,7 +17,6 @@ function Home() {
         <img src="https://i.pinimg.com/736x/27/2a/02/272a02a8f5ddb5b39c2151c2060ec644.jpg" alt="" />
         <img src="https://i.pinimg.com/736x/a4/e2/d3/a4e2d361b506928c67e92defbbbd278b.jpg" alt="" />
         <img src="https://i.pinimg.com/736x/23/f4/97/23f4975928a368442ae5104d074b5981.jpg" alt="" />
-        <img src="https://i.pinimg.com/564x/ca/60/ba/ca60ba986b3b817992382e2303ee2e2c.jpg" alt="" />
         <img src="https://i.pinimg.com/736x/74/80/cf/7480cf0f5a15b5e50e37e4a959d40ccf.jpg" alt="" />
       </div>
 
