@@ -22,13 +22,7 @@ function Home() {
 
       <Link to="/cupcakelist" className="button-link">Explore Our Cupcakes</Link>
 
-      <div className="contact-info">
-        <h2>Contact Us</h2>
-        <p>Email: contact@cupcakeshop.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 Sweet Lane, Cupcake City, CA 98765</p>
-      </div>
-    </div>
+       </div>
   );
 }
 

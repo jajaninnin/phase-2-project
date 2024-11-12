@@ -30,9 +30,8 @@ function CupcakeList() {
     <main>
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-      
-      <button className="submit-button" onClick={handleSort}>
-        Sort by Price: {sortOrder === "asc" ? "Low to High" : "High to Low"}
+      <button className="impt-button" onClick={handleSort}>
+        Sort by Price: {sortOrder === "asc" ? "High to Low" : "Low to High"}
       </button>
 
       <ul className="cards">
