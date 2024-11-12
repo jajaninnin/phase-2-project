@@ -14,10 +14,10 @@ function Home() {
       </p>
 
       <div className="shop-images">
-        <img src="https://files.oaiusercontent.com/file-vw3eShbtN2DfGHfkREqwcuZV?se=2024-11-12T00%3A42%3A55Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3De321779f-5263-49bd-a13f-b8286667590d.webp&sig=OPwOBcjoBIy8qavWKoduzYTozYlqQGSIRLoTZmwyoMY%3D" alt="" />
-        <img src="https://files.oaiusercontent.com/file-zk4xGjmk4iRzNyPiUDPOH7s4?se=2024-11-12T00%3A44%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D51abe5c2-bf6a-4488-9060-cc6d77f5a709.webp&sig=2J4kqPTv9hyje/N4OtiWW8jxkV05I9G2QbnbL6pKOes%3D" alt="" />
-        <img src="https://i.pinimg.com/736x/23/f4/97/23f4975928a368442ae5104d074b5981.jpg" alt="" />
-        <img src="https://i.pinimg.com/736x/74/80/cf/7480cf0f5a15b5e50e37e4a959d40ccf.jpg" alt="" />
+        <img src="https://th.bing.com/th/id/OIG2.99E5x2483uBUSn3OYBET?w=270&h=270&c=6&r=0&o=5&pid=ImgGn" alt="" />
+        <img src="https://th.bing.com/th/id/OIG2.DaBh47RD_acmioX1ecpO?w=270&h=270&c=6&r=0&o=5&pid=ImgGn" alt="" />
+        <img src="https://th.bing.com/th/id/OIG2.JiuKHN1bi9atRn77F0sL?w=270&h=270&c=6&r=0&o=5&pid=ImgGn" alt="" />
+        <img src="https://th.bing.com/th/id/OIG2.99E5x2483uBUSn3OYBET?w=270&h=270&c=6&r=0&o=5&pid=ImgGn" alt="" />
       </div>
 
       <Link to="/cupcakelist" className="button-link">Explore Our Cupcakes</Link>
