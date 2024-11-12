@@ -16,7 +16,7 @@ function CupcakeCard({ id, name, img, price }) {
       <button className="submit-button" onClick={() => addOrRemoveFromCart(id)}>
         {isInCart ? 'Remove From Cart' : 'Add To Cart'}
       </button>
-      <Link className="submit-button" to={`/cupcakelist/${id}`}>Details</Link>
+      <Link to={`/cupcakelist/${id}`}><button>Details</button></Link>
     </li>
   );
 }
