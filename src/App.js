@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer"
 import { Outlet } from "react-router-dom";
 
 
@@ -85,6 +86,7 @@ const App = () => {
         instead of just passing props all the way down.
         Makes it easier to get this data, instead of prop-drilling.
       */}
+      <Footer />
     </div>
   );
 }

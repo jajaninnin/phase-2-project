@@ -34,7 +34,7 @@ function Cart() {
             </div>
 
             <div className="cart-footer">
-                <button className="submit-button" onClick={() => navigate('/cupcakelist')}>Continue Shopping</button>
+                <button className="impt-button" onClick={() => navigate('/cupcakelist')}>Continue Shopping</button>
             </div>
         </main>
     );

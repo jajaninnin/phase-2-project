@@ -26,7 +26,7 @@ function CupcakeDetails() {
   }
 
   return (
-    <li className="details" data-testid="cupcake-details">
+    <ul className="details" data-testid="cupcake-details">
       <img className="details-image" src={cupcakeSolo.image} alt={cupcakeSolo.name} />
       <h4 className="details-name" >{cupcakeSolo.name}</h4>
       <p className="details-price" >Price: {cupcakeSolo.price}</p>
@@ -35,7 +35,7 @@ function CupcakeDetails() {
       <button className="submit-button" onClick={() => addOrRemoveFromCart(id)}>
         {isInCart ? 'Remove From Cart' : 'Add To Cart'}
       </button>
-    </li>
+    </ul>
   );
 }
 
