@@ -26,16 +26,18 @@ function CupcakeDetails() {
   }
 
   return (
-    <ul className="details" data-testid="cupcake-details">
-      <img className="details-image" src={cupcakeSolo.image} alt={cupcakeSolo.name} />
-      <h4 className="details-name" >{cupcakeSolo.name}</h4>
-      <p className="details-price" >Price: {cupcakeSolo.price}</p>
-      <p className="details-ingredients" >Ingredients: {cupcakeSolo.ingredients}</p>
-      <p className="details-allergies" >Allergies: {cupcakeSolo.allergies}</p>
-      <button className="submit-button" onClick={() => addOrRemoveFromCart(id)}>
-        {isInCart ? 'Remove From Cart' : 'Add To Cart'}
-      </button>
-    </ul>
+    <div className="details-container">
+      <div className="details" data-testid="cupcake-details">
+          <img className="details-image" src={cupcakeSolo.image} alt={cupcakeSolo.name} />
+          <h4 className="details-name" >{cupcakeSolo.name}</h4>
+          <p className="details-price" >Price: {cupcakeSolo.price}</p>
+          <p className="details-ingredients" >Ingredients: {cupcakeSolo.ingredients}</p>
+          <p className="details-allergies" >Allergies: {cupcakeSolo.allergies}</p>
+          <button className="submit-button" onClick={() => addOrRemoveFromCart(id)}>
+            {isInCart ? 'Remove From Cart' : 'Add To Cart'}
+          </button>
+      </div>
+    </div>
   );
 }
 

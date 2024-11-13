@@ -2,7 +2,7 @@ import Home from "./components/Home";
 import App from "./App";
 import CupcakeList from "./components/CupcakeList";
 import CupcakeDetails from "./components/CupcakeDetails";
-import CupcakeNewForm from "./components/CupcakeNewForm";
+import Reviews from "./components/Reviews";
 import ErrorPage from "./ErrorPage";
 import Cart from './components/Cart';
 
@@ -27,8 +27,8 @@ const routes = [{
       element: <CupcakeDetails />, 
     },
     {
-      path: "/cupcakenewform",
-      element: <CupcakeNewForm />,
+      path: "/reviews",
+      element: <Reviews />,
     },
     {
       path: "/mycart",
