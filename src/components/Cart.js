@@ -13,7 +13,7 @@ function Cart() {
     const cupcakesInCart = cupcakes.filter(cupcake => cartIds.includes(cupcake.id));
 
     const totalPrice = cupcakesInCart.reduce((total, cupcake) => {
-        return total + cupcake.price;
+        return total + parseFloat(cupcake.price);
     }, 0);
 
     return (
