@@ -17,7 +17,7 @@ function CupcakeCard({ id, name, img, price }) {
         {isInCart ? 'Remove From Cart' : 'Add To Cart'}
       </button>
       <Link to={`/cupcakelist/${id}`}><button>Details</button></Link>
-    </ul>
+      </ul>
   );
 }
 
