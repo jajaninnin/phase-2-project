@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 function Reviews() {
   const [ reviews, setReviews ] = useState([]);
-  const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
     fetch("http://localhost:3000/reviews")
@@ -49,20 +48,6 @@ function Reviews() {
     });
   };
 
-// Sort the reviews based on the stars
-const handleSort = () => {
-  setSortOrder((prevSortOrder) => (prevSortOrder === "asc" ? "desc" : "asc"));
-};
-
-// Apply sorting based on the selected order
-const sortedReviews = reviews.sort((a, b) => {
-  if (sortOrder === "asc") {
-    return a.stars - b.stars; // Ascending order
-  } else {
-    return b.stars - a.stars; // Descending order
-  }
-});
-
   const allReviews = reviews.map((review) => {
     return ( 
       <article className="card" key={review.id}>
@@ -103,9 +88,6 @@ const sortedReviews = reviews.sort((a, b) => {
         />
         <button className="submit-button" type="submit">Add Review</button>
       </form>
-      <button className="sort-button" onClick={handleSort}>
-        Sort Reviews: {sortOrder === "asc" ? "Lowest to Highest" : "Highest to Lowest"}
-      </button>
       <div>
         <h2>Read the Reviews:</h2>
         {allReviews}
