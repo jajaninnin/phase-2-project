@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 function Reviews() {
-  const [reviews, setReviews] = useState([]);
-  const [sortOrder, setSortOrder] = useState("asc"); // Sort order state
+  const [ reviews, setReviews ] = useState([]);
+  const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
     fetch("http://localhost:3000/reviews")
       .then((response) => response.json())
       .then((data) => setReviews(data))
       .catch((error) => console.error("Error fetching reviews:", error));
-  }, []);
+  })
 
   const addReview = (newReview) => {
     fetch("http://localhost:3000/reviews", {
@@ -22,10 +22,9 @@ function Reviews() {
       .then((response) => response.json())
       .then((review) => {
         setReviews([...reviews, review]);
-      })
+         })
       .catch((error) => console.error("Error adding new review:", error));
   };
-
   const [formData, setFormData] = useState({
     name: "",
     review: "",
@@ -36,7 +35,7 @@ function Reviews() {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: value
     });
   };
 
@@ -50,27 +49,29 @@ function Reviews() {
     });
   };
 
-  const sortedReviews = reviews
-    .sort((a, b) => {
-      if (sortOrder === "asc") {
-        return a.stars - b.stars;
-      } else {
-        return b.stars - a.stars;
-      }
-    })
-    .map((review) => {
-      return (
-        <article className="card" key={review.id}>
-          <p>{review.name}</p>
-          <p>"{review.review}"</p>
-          <p>Stars: {"⭐️".repeat(review.stars)}</p>
-        </article>
-      );
-    });
+// Sort the reviews based on the stars
+const handleSort = () => {
+  setSortOrder((prevSortOrder) => (prevSortOrder === "asc" ? "desc" : "asc"));
+};
 
-  const toggleSortOrder = () => {
-    setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
-  };
+// Apply sorting based on the selected order
+const sortedReviews = reviews.sort((a, b) => {
+  if (sortOrder === "asc") {
+    return a.stars - b.stars; // Ascending order
+  } else {
+    return b.stars - a.stars; // Descending order
+  }
+});
+
+  const allReviews = reviews.map((review) => {
+    return ( 
+      <article className="card" key={review.id}>
+        <p>{review.name}</p>
+        <p>"{review.review}"</p>
+        <p>Stars: {"⭐️".repeat(review.stars)}</p>
+      </article>
+    )
+  })
 
   return (
     <div className="review-form">
@@ -100,20 +101,14 @@ function Reviews() {
           value={formData.stars}
           onChange={handleChange}
         />
-        <button className="submit-button" type="submit">
-          Add Review
-        </button>
+        <button className="submit-button" type="submit">Add Review</button>
       </form>
-
+      <button className="sort-button" onClick={handleSort}>
+        Sort Reviews: {sortOrder === "asc" ? "Lowest to Highest" : "Highest to Lowest"}
+      </button>
       <div>
         <h2>Read the Reviews:</h2>
-
-        {/* Sort Button */}
-        <button className="submit-button" onClick={toggleSortOrder}>
-          Sort by Stars: {sortOrder === "asc" ? "Low to High" : "High to Low"}
-        </button>
-
-        {sortedReviews}
+        {allReviews}
       </div>
     </div>
   );
