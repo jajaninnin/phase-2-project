@@ -13,7 +13,7 @@ function CupcakeList() {
 
   
   const handleSort = () => {
-    // Toggle sortOrder: if it's "asc", set to "desc", otherwise set to "asc"
+
     setSortOrder((prevSortOrder) => (prevSortOrder === "asc" ? "desc" : "asc"));
   };
 
@@ -31,12 +31,12 @@ function CupcakeList() {
       }
     });
 
-  // Render the component's UI
+
   return (
     <main>
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-      {/* Button to toggle sorting order; calls handleSort on click */}
+      
       <button className="impt-button" onClick={handleSort}>
         
         Sort by Price: {sortOrder === "asc" ? "High to Low" : "Low to High"}
@@ -45,7 +45,6 @@ function CupcakeList() {
       
       <ul className="cards">
         {filteredCupcake.map((cupcake) => (
-          // For each cupcake, render a CupcakeCard component
           <CupcakeCard
             key={cupcake.id} 
             id={cupcake.id} 
@@ -59,6 +58,6 @@ function CupcakeList() {
   );
 }
 
-// Export the CupcakeList component as the default export
+
 export default CupcakeList;
 
