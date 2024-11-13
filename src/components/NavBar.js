@@ -12,7 +12,7 @@ function NavBar() {
       </span>
       <span className="headers">
         <Link className="header-link" to='/'>Home</Link>
-        <Link className="header-link" to='/cupcakelist'>Cupcake List</Link>
+        <Link className="header-link" to='/cupcakelist'>Cupcakes</Link>
         <Link className="header-link" to='/reviews'>Reviews</Link>
         <Link className="header-link" to='/mycart'>My Cart</Link>
       </span>

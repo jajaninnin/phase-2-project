@@ -6,9 +6,7 @@ function Cart() {
     const navigate = useNavigate();
     const { cupcakes, cart } = useOutletContext(); 
 
-   
     const cartIds = cart.map((cartItem) => cartItem.cupcakeId); 
-
     
     const cupcakesInCart = cupcakes.filter(cupcake => cartIds.includes(cupcake.id));
 
@@ -27,7 +25,6 @@ function Cart() {
                     price={cupcake.price}
                 />
             ))}
-
             
             <div className="total-price">
                 <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
