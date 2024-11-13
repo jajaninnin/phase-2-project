@@ -1,7 +1,7 @@
-import React, { useState } from "react"; // Import React and useState for managing component state
-import { useOutletContext } from "react-router-dom"; // Import useOutletContext to access data from the parent route
-import CupcakeCard from "./CupcakeCard"; // Import the CupcakeCard component for displaying each cupcake
-import Search from "./Search"; // Import the Search component for filtering cupcakes
+import React, { useState } from "react"; 
+import { useOutletContext } from "react-router-dom"; 
+import CupcakeCard from "./CupcakeCard"; 
+import Search from "./Search"; 
 
 // Define the CupcakeList component
 function CupcakeList() {
