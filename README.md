@@ -1,11 +1,11 @@
-# The CupCake Shop
+# The Cupcake Shop
                                  
 ## Description
 
 The Cupcake Shop is an interactive web application that brings the delightful experience of browsing and purchasing cupcakes to your fingertips. The application features a welcoming home page with information about our shop, including our address, contact details, and a brief introduction to the owners. Users can easily explore a diverse collection of cupcakes, sort them by price, and view detailed descriptions of each one. Additionally, users can add cupcakes to their cart, search for specific flavors, and even add a review about the shop or cupcakes, through a simple form.
 
 ## Key Features:
-Home Page: Introduction to The CupCake Shop, our location, and contact information, along with a short information about the store.
+Home Page: Introduction to The Cupcake Shop, our location, and contact information, along with a short information about the store.
 
 Explore Cupcakes and Cupcakes Tab: A comprehensive list of all available cupcakes, with sorting options by price and detailed views for each item.
 
