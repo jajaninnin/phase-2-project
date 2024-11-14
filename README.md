@@ -1,62 +1,89 @@
-                                       The CupCake Shop
+# The Cupcake Shop
                                  
-                                         Description
+## Description
 
-The CupCake Shop is an interactive web application that brings the delightful experience of browsing and purchasing cupcakes to your fingertips. The application features a welcoming home page with information about our shop, including our address, contact details, and a brief introduction to the owner. Users can easily explore a diverse collection of cupcakes, sort them by price, and view detailed descriptions of each one. Additionally, users can add cupcakes to their cart, search for specific flavors, and even add new cupcakes through a simple form.
+The Cupcake Shop is an interactive web application that brings the delightful experience of browsing and purchasing cupcakes to your fingertips. The application features a welcoming home page with information about our shop, including our address, contact details, and a brief introduction to the owners. Users can easily explore a diverse collection of cupcakes, sort them by price, and view detailed descriptions of each one. Additionally, users can add cupcakes to their cart, search for specific flavors, and even add a review about the shop or cupcakes, through a simple form.
 
-                                Key Features:
-Home Page: Introduction to The CupCake Shop, our location, and contact information, along with a short bio about the owner.
+## Key Features:
+Home Page: Introduction to The Cupcake Shop, our location, and contact information, along with a short information about the store.
 
-Explore Cupcakes: A comprehensive list of all available cupcakes, with sorting options by price and detailed views for each item.
+Explore Cupcakes and Cupcakes Tab: A comprehensive list of all available cupcakes, with sorting options by price and detailed views for each item.
 
-Cupcake Form: A user-friendly interface for adding new cupcakes to the shop and searching for specific cupcakes.
+Review Form: A user-friendly interface for adding new reviews to the shop.
 
-Shopping Cart: View all the cupcakes added to the cart, with options to continue shopping or proceed with your order.
+My Cart: View all the cupcakes added to the cart, with options to adjust the amount per cupcake in your cart, shows your total in the cart and the option to continue shopping.
 
-                                       Installation
-Follow these steps to set up The CupCake Shop locally:
+## Starting up the server in your terminal
+Clone the Repository:  
+git clone (git@github.com:karinamogha/phase-2-project-db.json.git)
 
-Clone the repository:
+Navigate into the directory: 
+cd phase-2-project-db.json             
 
-git clone https://github.com/yourusername/thecupcakeshop.git
-Navigate to the project directory:
-
-cd thecupcakeshop
-Install the necessary dependencies:
-
+Install json-server: 
 npm install
+
+Run the server:
+npx json-server db.json
+
+## Installation in a separate terminal
+Clone the repository:
+git clone (git@github.com:jajaninnin/phase-2-project.git)
+
+Navigate to the project directory:
+cd phase-2-project
+
+Install the necessary dependencies:
+npm install
+
 Start the application:
 npm start
 
-                            D.B.json-Installation 
- Clone the Repository -  git clone git@github.com:karinamogha/phase-2-project-db.json.git
+You wil see a prompt that will ask you a question if it is okay to run a different server, you will answer YES or Y.
 
-Then Cd into that folder - cd phase-2-project-db.json             
+## Usage  
 
-Install json-server - npm install -g json-server
+### Home
+Located as the first item on your right in the Navigation bar. 
 
-Run the mock API - json-server --watch db.json
+Allows the user to access the main home page to learn about The Cupcake Shop and find contact details on the footer.
 
-When your done making changes (commit your changes) - git add db.json
-git commit -m "Updated db.json"
-git push origin main
+The user will see a button named "Explore Cupcakes", when clicked, it will direct the user to the Cupcake list where in you can see all the available cupcakes.
 
+### Cupcakes
+Located in the Navigation bar. When clicked, it will take the user to the Cupcakes page, to see all the available cupcakes in store.
 
-                                       Usage  
+The user can type in a name of a cupcake in the search bar to look for specific cupcakes. 
 
-Home Page: Access the main page to learn about The CupCake Shop and find our contact details.
-Explore Cupcakes: Click "Explore Cupcakes" to browse through the list of delicious cupcakes. Use the sorting feature to filter cupcakes by price and click on any cupcake for more details.
-Cupcake Form: Use this form to add new cupcakes to the shop or search for specific cupcakes based on flavor or name.
+The user can also click the sorting button to sort cupcakes by price, changes as needed, from Low to High or High to Low. 
 
-Shopping Cart: View all your selected cupcakes in the cart. You can either proceed with your order or continue exploring more cupcakes.
+The user has the capability to add or remove the cart by clicking the button with the certain description as follows. 
 
-                                    Contributing
+The user also have access to the "Details" button, wherein it will take the user to another page to view specific details on each cupcake.
 
-We welcome contributions! Follow these steps to contribute:
+### Review
+The user can utilize this form to add a new review about the shop or cupcakes. There are 3 input boxes the user can type into, the user name, the review and the rating up to 5 stars. 
 
-Fork the repository
-Create a new branch (git checkout -b feature/YourFeature)
-Commit your changes (git commit -m 'Add YourFeature')
-Push to your branch (git push origin feature/YourFeature)
-Open a pull request
+The user can also click the sorting button to sort the reviews by the amount of stars, changes as needed, from Low to High or High to Low.
 
+### My Cart
+This page allows the user to view all the cupcakes that are added in the cart. 
+
+The user has the capability to adjust the amount per cupcake in the cart, however much the user wants it to be.
+
+A total price is displayed on the bottom right of the cupcake cards in the cart. The total price will adjust automatically as needed on any adjusments made by the user by adding or removing cupcakes in the cart or by adjust the amount of cupcakes in the cart itself.
+
+The use can then continue exploring more cupcakes by clicking on the button "Continue Shopping".
+
+## Contributing
+
+We welcome contributions!
+
+## License
+
+MIT.
+
+## The Developers:
+1. Janine Pamintuan
+2. Karina Mogha
+3. Ronald Roberts
