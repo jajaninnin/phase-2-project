@@ -6,7 +6,7 @@ function Home() {
     <div className="home">
       <h1>Welcome to Our Cupcake Shop!</h1>
       <p>
-        In 2024, Karina, Janine, and Ron came together to establish their cupcake shop, 
+        In 2024, Janine, Karina, and Ron came together to establish their cupcake shop, 
         driven by their shared passion for all things sweet and delicious. They combined 
         their creativity and love for desserts to create a space where customers can indulge 
         in unique, flavorful cupcakes made with quality ingredients and a touch of their 

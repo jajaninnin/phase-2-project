@@ -15,33 +15,33 @@ My Cart: View all the cupcakes added to the cart, with options to adjust the amo
 
 ## Starting up the server in your terminal
 Clone the Repository:  
-git clone (git@github.com:karinamogha/phase-2-project-db.json.git)
+git clone [db.json](git@github.com:karinamogha/phase-2-project-db.json.git)
 
 Navigate into the directory: 
-cd phase-2-project-db.json             
+`cd phase-2-project-db.json`         
 
 Install json-server: 
-npm install
+`npm install`
 
 Run the server:
-npx json-server db.json
+`npx json-server db.json`
 
 ## Installation in a separate terminal
 Clone the repository:
-git clone (git@github.com:jajaninnin/phase-2-project.git)
+git clone [project](git@github.com:jajaninnin/phase-2-project.git)
 
 Navigate to the project directory:
-cd phase-2-project
+`cd phase-2-project`
 
 Install the necessary dependencies:
-npm install
+`npm install`
 
 Start the application:
-npm start
+`npm start`
 
-You wil see a prompt that will ask you a question if it is okay to run a different server, you will answer YES or Y.
+You wil see a prompt that will ask you a question if it is okay to run a different server, you will answer Y or Yes.
 
-## Usage  
+## How to Use 
 
 ### Home
 Located as the first item on your right in the Navigation bar. 
