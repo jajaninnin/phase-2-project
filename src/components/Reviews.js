@@ -111,7 +111,7 @@ function Reviews() {
 
         {/* Sort Button */}
         <button className="submit-button" onClick={toggleSortOrder}>
-          Sort by Stars: {sortOrder === "asc" ? "Low to High" : "High to Low"}
+          Sort by Stars: {sortOrder === "asc" ? "High to Low" : "Low to High"}
         </button>
 
         {sortedReviews}

@@ -51,7 +51,7 @@ const App = () => {
           },
           // Post a new object where "cupcakeId" is the id of the cupcake you want to add
           // to the cart. It will be the same id as in the cupcake object in db.json.
-          body: JSON.stringify({cupcakeId: id}),
+          body: JSON.stringify({cupcakeId: id, amount: 1}),
       })
       .then((response) => response.json())
       .then((cartResponse) => {
