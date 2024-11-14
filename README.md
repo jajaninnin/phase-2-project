@@ -15,7 +15,7 @@ My Cart: View all the cupcakes added to the cart, with options to adjust the amo
 
 ## Starting up the server in your terminal
 Clone the Repository:  
-git clone [db.json](git@github.com:karinamogha/phase-2-project-db.json.git)
+git clone (git@github.com:karinamogha/phase-2-project-db.json.git)
 
 Navigate into the directory: 
 `cd phase-2-project-db.json`         
@@ -28,7 +28,7 @@ Run the server:
 
 ## Installation in a separate terminal
 Clone the repository:
-git clone [project](git@github.com:jajaninnin/phase-2-project.git)
+git clone (git@github.com:jajaninnin/phase-2-project.git)
 
 Navigate to the project directory:
 `cd phase-2-project`
