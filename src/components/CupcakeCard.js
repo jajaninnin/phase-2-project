@@ -5,6 +5,8 @@ function CupcakeCard({ id, name, img, price, amount, cartId }) {
   const {checkIfInCart, addOrRemoveFromCart, cart, setCart} = useOutletContext(); // coming from App
   const [newAmount, setNewAmount] = useState(amount);
 
+  const BASE_URL = process.env.REACT_APP_JSON_SERVER
+
   // If the cupcake is in the cart, you need to remove it when clicking the button,
   // otherwise, you need to add it. This is used to determine if the add or remove happens.
   const isInCart = checkIfInCart(id);
@@ -13,7 +15,7 @@ function CupcakeCard({ id, name, img, price, amount, cartId }) {
     const newAmt = event.target.value;
     const newAmountAsNumber = parseInt(newAmt || 1, 10);
     
-    fetch(`http://localhost:3000/cart/${cartId}`, {
+    fetch(BASE_URL + `/cart/${cartId}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "Application/JSON",
