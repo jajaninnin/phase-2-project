@@ -1,4 +1,4 @@
-import Home from "./components/Home";
+import Home from "./components/HomePage";
 import App from "./App";
 import CupcakeList from "./components/CupcakeList";
 import CupcakeDetails from "./components/CupcakeDetails";
