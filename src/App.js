@@ -8,19 +8,21 @@ const App = () => {
   const [cupcakes, setCupcakes] = useState([]);
   const [cart, setCart] = useState([]);
 
+  const BASE_URL = process.env.REACT_APP_JSON_SERVER
+
   useEffect(() => {
-    fetch("http://localhost:3000/cupcakes")
+    fetch(BASE_URL + "/cupcakes")
       .then((response) => response.json())
       .then((data) => setCupcakes(data))
       .catch((error) => console.error("Error fetching cupcake data:", error));
 
-    fetch("http://localhost:3000/cart")
+    fetch(BASE_URL + "/cart")
       .then((response) => response.json())
       .then((data) => {
         setCart(data);
       })
       .catch((error) => console.error("Error fetching cart data:", error));
-  }, []);
+  }, [BASE_URL]);
 
   // I put this in app so it can be accessible in CupcakeDetails and CupcakeCard 
   // using outlet context
@@ -30,7 +32,7 @@ const App = () => {
     const isThereCartItemToRemove = cart.find((cartItem) => cartItem.cupcakeId === id); 
     // If it's in the cart, delete it
     if (isThereCartItemToRemove) {
-      fetch(`http://localhost:3000/cart/${isThereCartItemToRemove.id}`, {
+      fetch(BASE_URL + `/cart/${isThereCartItemToRemove.id}`, {
           method: 'DELETE',
           headers: {
             "Content-Type": "Application/JSON",
@@ -44,7 +46,7 @@ const App = () => {
       .catch((error) => console.error("Error removing item from cart:", error));
     } else {
       // If it's not in the cart, add it to the cart by posting it to db.json
-      fetch(`http://localhost:3000/cart`, {
+      fetch(BASE_URL + `/cart`, {
           method: 'POST',
           headers: {
             "Content-Type": "Application/JSON",

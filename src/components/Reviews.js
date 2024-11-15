@@ -4,15 +4,17 @@ function Reviews() {
   const [reviews, setReviews] = useState([]);
   const [sortOrder, setSortOrder] = useState("asc"); // Sort order state
 
+  const BASE_URL = process.env.REACT_APP_JSON_SERVER
+
   useEffect(() => {
-    fetch("http://localhost:3000/reviews")
+    fetch(BASE_URL + "/reviews")
       .then((response) => response.json())
       .then((data) => setReviews(data))
       .catch((error) => console.error("Error fetching reviews:", error));
-  }, []);
+  }, [BASE_URL]);
 
   const addReview = (newReview) => {
-    fetch("http://localhost:3000/reviews", {
+    fetch(BASE_URL + "/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "Application/JSON",
